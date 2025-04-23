@@ -39,6 +39,7 @@ pip install -r requirements.txt
 ## Dataset
 To verify our approach in more complex obstacle avoidance scenarios, we specifically made a dataset pipeline and produced a dataset Robot-obtalcles-panda (ROP) using Pybullet.
 This repository also includes ROP's data loading code and data generation code.
+The dataset can be found [here](https://acrobot-buaa.github.io/).
 
 ### Data generation
 If you want to generate the data yourself, we provide scripts for generating datasets which are designed to maintain an even distribution of data in the dataset. To ensure uniformity, you will first generate data for each individual problem type and then merge them together.
