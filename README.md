@@ -41,7 +41,7 @@ To verify our approach in more complex obstacle avoidance scenarios, we specific
 This repository also includes ROP's data loading code and data generation code.
 
 **dataset/robot.npz** is the dataset file we generated. 
-The dataset can also be found [here](https://acrobot-buaa.github.io/pathplan.html).
+We provide the data in ‘.npz’ and '.hdf5' at GoogleDrive [link](https://drive.google.com/drive/folders/1iJC03A8MZWJliMj2k0SltDjwI0yZQht8?usp=sharing)
 
 ### Data generation
 If you want to generate the data yourself, we provide scripts for generating datasets which are designed to maintain an even distribution of data in the dataset. To ensure uniformity, you will first generate data for each individual problem type and then merge them together.
