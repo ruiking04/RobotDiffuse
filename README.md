@@ -43,10 +43,38 @@ This repository also includes ROP's data loading code and data generation code.
 **dataset/robot.npz** is the dataset file we generated. 
 We provide the data in ‘.npz’ and '.hdf5' at GoogleDrive [link](https://drive.google.com/drive/folders/1iJC03A8MZWJliMj2k0SltDjwI0yZQht8?usp=sharing)
 
-### Data generation
-If you want to generate the data yourself, we provide scripts for generating datasets which are designed to maintain an even distribution of data in the dataset. To ensure uniformity, you will first generate data for each individual problem type and then merge them together.
+Here's a more complete explanation of the dataset structure and how x_train and y_train relate to each other:
 
-You can use `datagen.py` to generate data for a single type of environment and between two task-oriented poses .  
+**x_train (shape: 98000 × 254 × 7)**
+
+x_train contains 98,000 motion trajectories of the Franka Panda 7-DoF robotic arm.
+- Each trajectory consists of 254 frames, representing a continuous motion sequence.
+- Each frame is a 7-dimensional vector, where each value corresponds to the rotation angle of one of the robot’s 7 joints.
+- In other words, x_train[i] is the optimal motion trajectory for the i-th robot task.
+
+**y_train (shape: 98000 × 23)**
+y_train contains the task definitions corresponding to each trajectory in x_train.
+
+Each row y_train[i] defines a specific robot task, and x_train[i] gives the corresponding optimal trajectory to complete that task.
+
+The 23 elements of y_train[i] are interpreted as follows:
+
+- y_train[i][0:7]: Initial joint angles (start pose).
+
+- y_train[i][7:14]: Final joint angles (end pose).
+
+- y_train[i][14:17]: XYZ coordinates of the first obstacle center.
+
+- y_train[i][17:20]: XYZ coordinates of the second obstacle center.
+
+- y_train[i][20:23]: XYZ coordinates of the final target point for the end-effector.
+
+All scenes contain two spherical obstacles, and all positions are normalized within the robot’s workspace.
+
+### Data generation
+If you want to generate the data yourself, we provide scripts for generating datasets that are designed to maintain an even distribution of data in the dataset. To ensure uniformity, you will first generate data for each individual problem type and then merge them together.
+
+You can use `datagen.py` to generate data for a single type of environment and between two task-oriented poses.  
 
 ```bash
 cd datasets\data_pipeline
