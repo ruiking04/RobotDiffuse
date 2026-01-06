@@ -1,9 +1,10 @@
-# RobotDiffuse: Motion Planning for Redundant Manipulator based on Diffusion Model
+# RobotDiffuse: Diffusion-Based Motion Planning for Redundant Manipulators with the ROP Obstacle Avoidance Dataset
 This repository provides the implementation of the _RobotDiffuse: Motion Planning for Redundant Manipulator based on Diffusion Model_ method, called _RobotDiffuse_ below. 
 
 ## Abstract
-> Redundant manipulators, with their higher Degrees of Freedom (DOFs), offer enhanced kinematic performance and versatility, making them suitable for applications like manufacturing, surgical robotics, and human-robot collaboration. However, motion planning for these manipulators is challenging due to increased DOFs and complex, dynamic environments. While traditional motion planning algorithms struggle with high-dimensional spaces, deep learning-based methods often face instability and inefficiency in complex tasks.
-> This paper introduces RobotDiffuse, a diffusion model-based approach for motion planning in redundant manipulators. By integrating physical constraints with a point cloud encoder and replacing the U-Net structure with an encoder-only transformer, RobotDiffuse improves the model's ability to capture temporal dependencies and generate smoother, more coherent motion plans. We validate the approach using a complex simulator, and release a new dataset with 35M robot poses and 0.14M obstacle avoidance scenarios. Experimental results demonstrate the effectiveness of RobotDiffuse and the promise of diffusion models for motion planning tasks.
+> Redundant manipulators, with their higher Degrees of Freedom (DoFs), offer enhanced kinematic performance and versatility, making them suitable for applications like manufacturing, surgical robotics, and human-robot collaboration. However, motion planning for these manipulators is challenging due to increased DoFs and complex, dynamic environments. While traditional motion planning algorithms struggle with high-dimensional spaces, deep learning-based methods often face instability and inefficiency in complex tasks.
+> This paper introduces RobotDiffuse, a diffusion model-based approach for motion planning in redundant manipulators. By integrating physical constraints with a point cloud encoder and replacing the U-Net structure with an encoder-only transformer, RobotDiffuse improves the model’s ability to capture temporal dependencies and generate smoother, more coherent motion plans.
+> We validate the approach using a complex simulator and release a new dataset, Robot-obtalcles-panda (ROP), with 35M robot poses and 0.14M obstacle avoidance scenarios. The highest overall score obtained in the experiment demonstrates the effectiveness of RobotDiffuse and the promise of diffusion models for motion planning tasks.
 
 ## Motivation Explanation 
 Sample-based approaches take more time and involve more backtracking.
@@ -186,3 +187,4 @@ Part of the code, especially the baseline code and ablation code, is based on th
 
 
    
+
