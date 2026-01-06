@@ -17,19 +17,6 @@ Obstacle Spaces WS_{obs} contains two blue sphere obstacles, where the center of
 ![5001b0d9ad0f36519406de61a6fe6c2](https://github.com/user-attachments/assets/8d199f89-5464-4f0c-9202-6b84fd626e80)
 
 
-## Citation
-Link to our paper [here](https://arxiv.org/abs/2412.19500).
-If you use this code for your research, please cite our paper:
-
-```
-@article{zhang2024robotdiffuse,
-  title={RobotDiffuse: Motion Planning for Redundant Manipulator based on Diffusion Model},
-  author={Zhang, Xiaohan and Mou, Xudong and Wang, Rui and Wo, Tianyu and Gu, Ningbo and Wang, Tiejun and Xu, Cangbai and Liu, Xudong},
-  journal={arXiv preprint arXiv:2412.19500},
-  year={2024}
-}
-```
-
 ## Installation
 This code is based on `Python 3.7`, all requirements are written in `requirements.txt`. 
 
@@ -42,7 +29,7 @@ To verify our approach in more complex obstacle avoidance scenarios, we specific
 This repository also includes ROP's data loading code and data generation code.
 
 **dataset/robot.npz** is the dataset file we generated. 
-We provide the data in ‘.npz’ and '.hdf5' at GoogleDrive [link](https://drive.google.com/drive/folders/1iJC03A8MZWJliMj2k0SltDjwI0yZQht8?usp=sharing)
+We provide the data in ‘.npz’ and '.hdf5' at the anonymous GoogleDrive [hdf5-link](https://drive.google.com/file/d/19_c4vBbOTpoJJ3z8Yxf2EpVGywcyUK2P/view) and [npz-link](https://drive.google.com/file/d/1HmCEZlBvQexWg0iMGrllTWoz0idyn4IB/view?usp=drive_link).
 
 Here's a more complete explanation of the dataset structure and how x_train and y_train relate to each other:
 
@@ -187,4 +174,5 @@ Part of the code, especially the baseline code and ablation code, is based on th
 
 
    
+
 
